@@ -18,4 +18,14 @@ public class AdmitadClient implements ShopClient {
     public List<Shop> loadShops() {
         return null;
     }
+
+    @Override
+    public void updateToken() {
+
+    }
+
+    @Override
+    public void updateShops() {
+
+    }
 }

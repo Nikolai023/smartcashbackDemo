@@ -6,4 +6,8 @@ import java.util.List;
 
 public interface ShopClient {
     List<Shop> loadShops();
+
+    void updateToken();
+
+    void updateShops();
 }
