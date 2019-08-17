@@ -1,4 +1,4 @@
-package com.adwolf.smartcashback.config;
+package com.adwolf.smartcashback;
 
 import com.adwolf.smartcashback.dao.user.UserDao;
 import org.springframework.context.annotation.Primary;

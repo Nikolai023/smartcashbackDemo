@@ -1,38 +1,37 @@
 plugins {
-    id 'org.springframework.boot' version '2.1.6.RELEASE'
-    id 'java'
+    id 'io.spring.dependency-management' version "1.0.8.RELEASE"
 }
 
-apply plugin: 'io.spring.dependency-management'
+allprojects {
+    group = 'com.adwolf'
+    version = '0.0.1-SNAPSHOT'
 
-group = 'com.adwolf'
-version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '12'
+    apply plugin: 'java'
+    apply plugin: 'io.spring.dependency-management'
+    apply plugin: 'java-library'
 
-configurations {
-    developmentOnly
-    runtimeClasspath {
-        extendsFrom developmentOnly
+    repositories {
+        jcenter()
     }
-    compileOnly {
-        extendsFrom annotationProcessor
+
+    dependencyManagement {
+        imports {
+            mavenBom("org.springframework.boot:spring-boot-dependencies:2.1.6.RELEASE")
+        }
     }
 }
 
-repositories {
-    mavenCentral()
-}
-
+/*
 dependencies {
+    compile project(':smartcashback-application')
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-security'
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
-    implementation 'org.springframework.boot:spring-boot-starter-web'
     runtimeClasspath 'com.h2database:h2'
-    compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
 //    runtimeOnly 'org.postgresql:postgresql'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.security:spring-security-test'
 }
+*/

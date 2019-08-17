@@ -1,4 +1,4 @@
-package com.adwolf.smartcashback.config;
+package com.adwolf.smartcashback.application.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
