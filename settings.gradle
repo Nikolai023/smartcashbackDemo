@@ -1,3 +1,5 @@
 rootProject.name = 'smartcashback'
-include 'smartcashback-configuration'
-include 'smartcashback-other'
+include 'smartcashback-web'
+include 'smartcashback-dao'
+include 'smartcashback-domain'
+
